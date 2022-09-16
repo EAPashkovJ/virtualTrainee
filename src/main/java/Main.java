@@ -21,30 +21,14 @@ public class Main {
         }
         int select = sc.nextInt();
         switch (select) {
+            // Вывод списка городов в консоль.
             case 1 -> print(readFile());
+            // Сортировка городов по имени.
             case 2 -> print(sortByNameNaturalOrder(readFile()));
+            // Сортировка списка городов по федеральному округу и наименованию города.
             case 3 -> print(sortByDistrictAndName(readFile()));
             default -> System.out.println("Неверное значение!");
         }
-
-
-
-        /*
-        Вывод списка городов в консоль.
-         */
-        // print(readFile());
-
-        /*
-        Сортировка городов по имени.
-         */
-        //  print(sortByNameNaturalOrder(readFile()));
-
-        /*
-        Сортировка списка городов по федеральному округу и наименованию города.
-         */
-        //print(sortByDistrictAndName(readFile()));
-
-
     }
 }
 
