@@ -50,11 +50,8 @@ public class CityUtils {
             city.setDistrict(arr[3]);
             city.setPopulation(Integer.valueOf(arr[4]));
             city.setFoundation(arr.length >= 6 ? arr[5] : "else");
-
-
-            System.out.println(city);
-
         }
+
         // закрываем scanner после вычитывания файла
         scanner.close();
         return city;

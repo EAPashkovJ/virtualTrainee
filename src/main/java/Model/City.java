@@ -2,14 +2,11 @@ package Model;
 
 import java.util.Objects;
 
-public class City {
-    // private int id;
+public class City implements Comparable<City> {
     private String name;
     private String region;
     private String district;
     private Integer population;
-
-
     private String foundation;
 
     public City() {
@@ -19,43 +16,34 @@ public class City {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getDistrict() {
+        return district;
     }
 
-    public String getRegion() {
-        return region;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setRegion(String region) {
         this.region = region;
     }
 
-    public String getDistrict() {
-        return district;
-    }
-
     public void setDistrict(String district) {
         this.district = district;
-    }
-
-    public Integer getPopulation() {
-        return population;
     }
 
     public void setPopulation(Integer population) {
         this.population = population;
     }
 
-
-    public String getFoundation() {
-        return foundation;
-    }
-
     public void setFoundation(String foundation) {
         this.foundation = foundation;
     }
 
+
+    /*
+    Переопределяем equals  и hashCode() для реализации сортировки
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -81,5 +69,12 @@ public class City {
     }
 
 
+
+
+    @Override
+    public int compareTo(City o) {
+       return getDistrict().compareTo(o.getDistrict());
+
+    }
 }
 
